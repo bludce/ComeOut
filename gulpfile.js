@@ -10,7 +10,16 @@ var gulp       = require('gulp'), // Подключаем Gulp
     pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
     cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
-    spritesmith = require('gulp.spritesmith');//Подключаем библиотеку для объединения иконок в спрайты
+    spritesmith  = require('gulp.spritesmith');//Подключаем библиотеку для объединения иконок в спрайты
+    wiredep      = require('wiredep').stream;
+
+gulp.task('bower',function() {
+    gulp.src('app/index.html')
+        .pipe(wiredep({
+            directory: 'app/bower_components/'
+        }))
+        .pipe(gulp.dest('app'));
+})
 
 /*Создаем спрайты*/
 gulp.task('sprite', function () {
@@ -33,12 +42,12 @@ gulp.task('sass', function(){
 });
 
 /*Переносим библиотеки из bower в app*/
-gulp.task('scripts', function() {
+/*gulp.task('scripts', function() {
     return gulp.src([ 
         'bower_components/jquery/dist/jquery.min.js', 
         ])
         .pipe(gulp.dest('app/js')); 
-});
+});*/
 
 /*Создаем сервер с livereload*/
 gulp.task('browser-sync', function() { 
@@ -51,8 +60,9 @@ gulp.task('browser-sync', function() {
 });
 
 /*Смотрим изменение файлов html,sass,js*/
-gulp.task('watch', ['browser-sync' , 'scripts'], function() {
+gulp.task('watch', ['browser-sync'], function() {
     gulp.watch('app/sass/**/*.sass', ['sass']); 
+    gulp.watch('bower.json', ['bower']);
     gulp.watch('app/*.html', browserSync.reload);
     gulp.watch('app/js/**/*.js', browserSync.reload);   
 });

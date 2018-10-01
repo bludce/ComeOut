@@ -8,27 +8,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="icon" href="" type="image/x-icon">
  	<link rel="shortcut icon" href="" type="image/x-icon"> 
-	
+ 	<!-- bower:css -->
+ 	<link rel="stylesheet" href="bower_components/components-font-awesome/css/fontawesome-all.css" />
+ 	<!-- endbower -->
+ 	
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body class="page">
 	<header class="header">
-		<div class="container">
-			<div class="header__socials socials">
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
-			</div>
-			<div class="header__burger burger">
-				<span class="burger__line"></span>
-				<span class="burger__line"></span>
-				<span class="burger__line"></span>
+		<div class="header__container">
+			<div class="header__top">
+				<div class="socials">
+					<a href="" class="socials__link"><i class="fab fa-behance fa-2x"></i></a>
+					<a href="" class="socials__link"><i class="fab fa-dribbble fa-2x"></i></a>
+					<a href="" class="socials__link"><i class="fab fa-facebook-f fa-2x"></i></a>
+					<a href="" class="socials__link"><i class="fab fa-twitter fa-2x"></i></a>
+					<a href="" class="socials__link"><i class="fab fa-linkedin-in fa-2x" ></i></a>
+				</div>
+				<div class="header__burger burger">
+					<div class="burger__line"></div>
+				</div>
 			</div>
 			<div class="hero">
-				<h1 class="hero__title">hello! <span class="hero__subtitle">I'm <span class="hero__subtitle--bold">Oliver Queen</span></span></h1>
-				<div class="hero__description">Web & Interface Designer</div>
+				<div class="hero__content">
+					<h1 class="hero__title">Hello! <span class="hero__subtitle">I'm <span class="hero__subtitle--bold">Oliver Queen</span></span></h1>
+					<div class="hero__description">Web & Interface Designer</div>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -408,5 +413,8 @@
 			</div>
 		</div>
 	</footer>
+	<!-- bower:js -->
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
 </body>
 </html>
