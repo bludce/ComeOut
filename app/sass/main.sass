@@ -2,10 +2,13 @@
 @import "fonts.sass"
 @import "mixin.sass"
 
+* 
+	box-sizing: border-box
+
 .page
 	box-sizing: border-box
-	font-family: "OpenSans-Regular"
-	font-size: 0.875rem
+	font-family: "OpenSans-light"
+	font-size: 1rem
 	margin: 0
 	padding: 0
 	background-color: $main-bg
@@ -100,6 +103,106 @@
 		font-size: 2.25rem
 		line-height: 2.5
 		letter-spacing: -1px
+
+
+
+/*about*/
+.about
+	&__container
+		@extend %container
+	&__flex
+		display: flex
+		justify-content: space-between
+		padding-top: 90px
+
+.hero-img
+	width: 435px
+	height: 435px
+	position: relative
+	margin-left: 100px
+	border: 7px solid transparent
+	border-image: linear-gradient(top left, $green 0%, $blue 100%)
+	border-image-slice: 1
+	&__link
+		width: 435px
+		height: 435px
+		padding:  1.875rem  1.875rem 0  1.875rem
+		transform: translate(-2.5rem, 30px)
+		background-color: #141820
+	&__btn
+		display: inline-block
+		position: relative
+		padding: 1rem 2.188rem
+		margin-top: 3.75rem
+		transform: translateX(50%)
+		font-family: "OpenSans-Semibold"
+		font-size: 0.75rem
+		color: #fff
+		text-decoration: none
+		background: -webkit-linear-gradient(right, $green, $blue)
+		border-radius: 10px
+		z-index: 1
+
+.personal
+	width: 50%
+	&__content
+		padding: 0 3.75rem
+	&__title
+		+headline-text
+		margin: 0
+	&__description
+		padding-top: 2.5rem
+
+.description
+	&__text
+		margin: 0
+		line-height: 1.75rem
+	&__list
+		margin: 0
+		padding-top: 25px
+		list-style-type: none
+		padding-left: 0
+	&__item
+		font-size: 1.125rem
+		margin-bottom: 25px
+		font-family: "OpenSans-Regular"
+	&__title
+		text-transform: uppercase
+		color: $body-headline
+
+.interests
+	margin-top: 9.375rem
+	&__title
+		+headline-text
+		font-size: 2.5rem
+		padding: 0 4rem
+	&__list
+		display: flex
+		margin-top: 75px
+		padding: 0 2rem
+	&__item
+		padding: 0 2.813rem
+	&__icon
+		width: 120px
+		height: 120px
+		display: flex
+		justify-content: center
+		align-items: center
+		border: 2px solid $body-headline
+		border-radius: 50%
+		color: $body-headline
+		&:hover
+			background-color: $body-headline
+			color: #fff
+
+	&__text
+		text-align: center
+		font-family: "OpenSans-Regular"
+		margin: 0
+		padding-top: 20px
+
+
+
 
 //ALWAYS END
 @import "media.sass"
