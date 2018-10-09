@@ -332,11 +332,122 @@
 .skills 
 	&__container
 		@extend %container
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		padding: 0 30px
 	&__title
 		+headline-text
 		margin-bottom: 100px
 	&__list
 		background-color: $same-bg
+		padding: 70px 0
+		font-family: "OpenSans-Semibold"
+	&__item
+		width: 45%
+		padding-bottom: 60px
+	&__name
+		text-transform: uppercase
+		padding-bottom: 10px
+
+.progress-bar
+	position: relative
+	background-color: #0f1012
+	height: 5px
+	width: 100%
+	&__line
+		position: relative
+		height: 5px
+		background-color: $body-headline
+		box-shadow: inset 1 0 0px #000
+		&:after
+			content: ''
+			position: absolute
+			top: -2px
+			left: calc(100% - 5px)
+			width: 10px
+			height: 10px
+			background-color: $body-headline
+			border-radius: 50%
+			box-shadow: 0 0 1px #000
+
+	&--active-95
+		width: 95%
+		&:before
+			content: '95%'
+			position: absolute
+			top: -30px
+			left: calc(100% - 12px)
+	&--active-75
+		width: 75%
+		&:before
+			content: '75%'
+			position: absolute
+			top: -30px
+			left: calc(100% - 12px)
+	&--active-90
+		width: 90%
+		&:before
+			content: '90%'
+			position: absolute
+			top: -30px
+			left: calc(100% - 12px)
+	&--active-70
+		width: 70%
+		&:before
+			content: '70%'
+			position: absolute
+			top: -30px
+			left: calc(100% - 12px)
+	
+/*services*/
+.services
+	&__container
+		@extend %container
+	&__list
+		display: flex
+		justify-content: center
+		align-items: baseline
+		padding: 180px 0
+	&__item
+		width: 350px
+		padding: 35px 30px
+		background-color: $same-bg
+	&__count
+		font-family: "OpenSans-bold"
+		color: #000
+		font-size: 2.313rem
+		padding-bottom: 35px
+		padding-left: 5px
+	&__title
+		font-family: "OpenSans-Semibold"
+		font-size: 1.5rem
+		text-transform: uppercase
+		color: $body-headline
+		padding-bottom: 25px
+	&__text
+		font-family: "OpenSans-Regular"
+		padding-bottom: 70px
+
+.services-active
+	background-color: $body-headline
+	transform: scale(1.07)
+	&__count
+		font-family: "OpenSans-bold"
+		color: #07463e
+		font-size: 2.313rem
+		padding-bottom: 35px
+		padding-left: 5px
+	&__title
+		font-family: "OpenSans-Semibold"
+		font-size: 1.5rem
+		text-transform: uppercase
+		color: #1f2229
+		padding-bottom: 25px
+	&__text
+		font-family: "OpenSans-Regular"
+		padding-bottom: 70px
+
 
 
 //ALWAYS END
