@@ -534,6 +534,96 @@
 		text-transform: uppercase
 
 
+/*reviews*/
+
+.testimonial
+	&__container
+		@extend %container
+		padding-bottom: 150px
+	&__title
+		+headline-text
+		padding-top: 180px
+		padding-bottom: 140px
+
+.clients
+	display: flex
+	justify-content: center
+
+.client-item
+	text-align: center
+	&__image
+		display: block
+		margin: 0 auto
+		border-radius: 50%
+	&__icon
+		padding: 15px 0
+		color: $body-headline
+	&__name
+		color: $body-headline
+		font-family: "OpenSans-Semibold"
+		font-size: 1.313rem
+	&__text
+		padding: 30px 150px
+		position: relative
+		font-style: italic
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			left: 110px
+			top: 15px
+			background-image: url(../img/quote-left-solid.svg)
+			width: 25px
+			height: 25px
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 15px
+			right: 110px
+			background-image: url(../img/quote-right-solid.svg)
+			width: 25px
+			height: 25px
+
+
+/*hire me*/
+
+.hire
+	background-color: $body-headline
+	&__container
+		@extend %container
+		padding-top: 80px
+		padding-bottom: 70px
+	
+.hire-content
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	color: $main-bg
+	&__text
+		padding: 0 1.5rem
+	&__title
+		font-size: 2.313rem
+		font-family: "OpenSans-Extrabold"
+		text-transform: uppercase
+		letter-spacing: 3px
+		margin: 0
+	&__subtitle
+		font-family: "OpenSans-Regular"
+		text-align: center
+	&__btn
+		display: block
+		padding: 1.25rem 3.125rem
+		background-color: $main-bg
+		color: $body-headline
+		text-decoration: none
+		text-transform: uppercase
+		font-family: "OpenSans-Semibold"
+		font-size: 1.125rem
+		border-radius: 5px
+		margin-top: 10px
+
+
 
 
 //ALWAYS END
