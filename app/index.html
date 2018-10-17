@@ -420,34 +420,37 @@
 		</div>
 	</section>
 	<section class="contacts">
-		<div class="container">
+		<div class="contacts__container">
 			<h2 class="contacts__title">contact me</h2>
 			<form action="" class="form">
-				<div class="form__fields">
-					<div class="field">
-						<label for="" class="field__text">name</label>
-						<input type="text" name="" id="" class="field__input" placeholder="MIZANUR RAHMAN REMON">
+				<div class="form-fields">
+					<div class="field form-fields--half">
+						<input type="text" name="name" id="" class="field__input" placeholder="MIZANUR RAHMAN REMON">
+						<label for="name" class="field__text">name</label>
 					</div>
-					<div class="field">
-						<label for="" class="field__text">email</label>
-						<input type="text" name="" id="" class="field__input" placeholder="email">
+					<div class="field form-fields--half">
+						<input type="text" name="email" id="" class="field__input" placeholder="EMAIL">
+						<label for="email" class="field__text">email</label>
 					</div>
 				</div>
 				<div class="field">
-					<textarea name="" id="" cols="30" rows="10" class="field__input" placeholder="message"></textarea>
+					<textarea name="message" id="" cols="30" rows="10" class="field__input" placeholder="MESSAGE"></textarea>
+					<label for="message" class="field__text">message</label>
 				</div>
-				<button class="form__btn">send now</button>
+				<div class="form__send">
+					<button class="form__btn">send now</button>
+				</div>
 			</form>
 		</div>
 	</section>
 	<footer class="footer">
-		<div class="container">
-			<div class="footer__socials socials">
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
-				<a href="" class="socials__link"><i class="fa"></i></a>
+		<div class="footer__container">
+			<div class="footer-socials socials">
+				<a href="" class="footer-socials__link socials__link"><i class="fab fa-behance"></i></a>
+				<a href="" class="footer-socials__link socials__link"><i class="fab fa-dribbble "></i></a>
+				<a href="" class="footer-socials__link socials__link"><i class="fab fa-facebook-f "></i></a>
+				<a href="" class="footer-socials__link socials__link"><i class="fab fa-twitter "></i></a>
+				<a href="" class="footer-socials__link socials__link"><i class="fab fa-linkedin-in " ></i></a>
 			</div>
 			<div class="footer__copy">
 				oliver © 2017. ALL RIGHTS RESERVED.

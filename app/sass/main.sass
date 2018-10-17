@@ -191,9 +191,11 @@
 		border: 2px solid $body-headline
 		border-radius: 50%
 		color: $body-headline
+		transition: all 0.5s
 		&:hover
 			background-color: $body-headline
 			color: #fff
+			transition: all 0.5s
 
 	&__text
 		text-align: center
@@ -480,7 +482,6 @@
 		grid-template-rows: 368px 368px
 		gap: 25px
 
-
 .card
 	position: relative
 	&__img
@@ -494,9 +495,11 @@
 		height: 100%
 		padding: 15px
 		opacity: 0
+		transition: all 0.5s
 		&:hover
 			cursor: pointer
 			opacity: 1
+			transition: all 0.5s
 	&__content
 		width: 100%
 		height: 100%
@@ -681,6 +684,123 @@
 		padding: 10px 20px
 		font-size: 0.8rem
 		margin: 10px 0
+
+
+/*contacts*/
+.contacts
+	&__container
+		@extend %container
+	&__title
+		+headline-text
+		padding-top: 120px
+		padding-bottom: 180px
+
+.form
+	&__send
+		text-align: center
+	&__btn
+		border: 1px
+		border-style: solid
+		border-image: -webkit-linear-gradient(right, $green, $blue)
+		border-image-slice: 1
+		background-color: transparent
+		color: $body-headline
+		padding: 15px 45px 
+		font-family: "OpenSans-Regular"
+		text-transform: uppercase
+		margin: 60px 0
+
+.form-fields
+	display: flex
+	&--half
+		&:first-child
+			width: 50%
+			padding-right: 15px
+		&:last-child
+			width: 50%
+			padding-left: 15px
+
+::-webkit-input-placeholder
+	opacity: 0
+	transition: inherit
+
+.field
+	display: flex
+	flex-flow: column-reverse
+	margin-bottom: 1rem
+	&__input
+		z-index: 1
+		resize: none
+		font-size: 1.2rem
+		border: 0
+		border-bottom: 2px solid #58616d
+		-webkit-appearance: none
+		border-radius: 0
+		cursor: text
+		transition: all 0.2s
+		touch-action: manipulation
+		background: transparent
+		padding: 15px 0
+		color: $body-headline
+		&:focus
+			outline: 0
+			border-bottom: 2px solid $body-headline
+		&:placeholder-shown+.field__text
+			cursor: text
+			max-width: 66.66%
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+			transform-origin: left bottom
+			transform: translate(0, 40px) scale(1.5)
+		&:focus::-webkit-input-placeholder
+			opacity: 1
+		&:not(:placeholder-shown)+.field__text
+			transform: translate(0,0) scale(1)
+			cursor: pointer
+		&:focus+.field__text
+			transform: translate(0,0) scale(1)
+			cursor: pointer
+			color: $body-headline
+	&__text
+		text-transform: uppercase
+		color: #58616d
+		transition: all 0.5s
+
+
+/*footer*/
+.footer
+	&__container
+		@extend %container
+	&__copy
+		padding: 35px 0
+		text-transform: uppercase
+		font-family: "OpenSans-Regular"
+		line-height: 22px
+		color: $body-headline
+		text-align: center
+
+.footer-socials
+	text-align: center
+	color: $body-headline
+	display: flex
+	justify-content: center
+	padding-top: 100px
+	padding-bottom: 70px
+	border-bottom: 1px solid #313741
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 70px
+		height: 70px
+		text-decoration: none
+		border-radius: 50%
+		background-color: $same-bg
+		padding: 0
+		margin: 0 15px
+		font-size: 1.5rem
+		color: $body-headline
 
 
 
