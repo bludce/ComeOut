@@ -624,6 +624,64 @@
 		margin-top: 10px
 
 
+/*blog*/
+.blog
+	&__container
+		@extend %container
+	&__title
+		+headline-text
+		padding-top: 180px
+		padding-bottom: 120px
+	&__list
+		display: flex
+		flex-wrap: wrap
+	&__more
+		text-align: center
+	&__btn
+		+btn
+		padding: 20px 50px
+		margin-top: 60px
+		margin-bottom: 60px
+
+.post
+	width: calc(100% / 3)
+	padding: 0 20px
+	&__wrap-img
+		position: relative
+		padding-top: 66.25%
+		overflow: hidden
+	&__img
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: auto
+	&__description
+		padding: 25px
+		background-color: $same-bg
+	&__title
+		margin: 0
+		font-family: "OpenSans-bold"
+		color: $body-headline
+		font-size: 1.275rem
+		line-height: 1.675rem
+	&__info
+		font-family: "OpenSans-Semibold"
+		font-size: 1rem
+		margin: 1rem 0
+	&__date
+		padding-right: 10px
+	&__comments
+		padding-left: 10px
+		border-left: 2px solid #fff
+	&__text
+		line-height: 1.5rem
+	&__btn
+		+btn
+		padding: 10px 20px
+		font-size: 0.8rem
+		margin: 10px 0
+
 
 
 //ALWAYS END
