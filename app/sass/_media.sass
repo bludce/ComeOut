@@ -1,5 +1,5 @@
-/* Large Devices, Wide Screens 1200*/
-@media screen and (max-width: 1200px)
+/* Large Devices, Wide Screens 1370*/
+@media screen and (max-width: 1370px)
 	%container 
 		width: 940px
 	.hero
@@ -75,10 +75,6 @@
 		&__list
 			padding: 5rem 0
 
-	.card
-		&__content
-			height: calc(100% - 15px)
-
 	.testimonial
 		&__title
 			padding: 5rem 0
@@ -104,7 +100,8 @@
 
 	.post
 		width: 100%
-		margin-bottom: 1rem
+		margin-bottom: 3rem
+		padding: 0
 
 	.contacts
 		&__title
@@ -127,6 +124,8 @@
 	.interests
 		&__item
 			width: 50%
+		&__title
+			padding: 0
 
 	.timeline
 		padding: 4rem 0
@@ -140,7 +139,7 @@
 
 	.timeline-content
 		&__heading
-			padding-left: 60px
+			padding-left: 70px
 			padding-right: 5px
 		&__title
 			font-size: 1.25rem
@@ -179,8 +178,133 @@
 		&__title
 			margin: 5rem 0
 
-/* Medium Devices, Desktops 530*/
-/*@media screen and (max-width: 530px)
+	.services
+		&__list
+			flex-wrap: wrap
+		&__item
+			width: 100%
+			margin-bottom: 3rem
+			&:nth-child(1)
+				order: 2
+			&:nth-child(3)
+				order: 3
 
-/* Small Devices, Desktops 320*/
-/*@media screen and (max-width: 320px)
+	.services-active
+		transform: scale(1)
+
+	.portfolio
+		&__list
+			grid-template-columns: 1fr
+
+	.card
+		&__content
+			height: 100%
+
+
+	.testimonial
+		&__container
+			padding-bottom: 5rem
+
+
+	.hire-content
+		flex-direction: column
+		&__text
+			padding: 1rem 0
+
+/* Medium Devices, Desktops 530*/
+@media screen and (max-width: 530px)
+	.page
+		font-size: 14px
+
+	.socials
+		&__link
+			padding: 0 5px
+
+	.hero-img
+		width: 200px
+		height: 200px
+		&__link
+			width: 200px
+			height: 200px
+		&__btn
+			transform: translateX(0)
+
+	.description
+		&__item
+			font-size: 1rem
+			margin-bottom: 0.8rem
+		&__title
+			font-size: 1rem
+
+	.interests
+		&__item
+			width: 100%
+
+	.timeline-content
+		flex-flow: column wrap
+		&__heading
+			width: 100%
+			padding-right: 0
+		&__text
+			width: 100%
+			padding-left: 70px
+
+	.skills
+		&__item
+			width: 100%
+
+	.education
+		&__icon
+			top: 60px
+
+	.experience
+		&__icon
+			top: 140px
+	
+	.portfolio
+		&__title
+			padding-left: 30px
+			padding-right: 30px
+
+	.client-item
+		&__text
+			padding: 30px 1rem
+			&:before
+				left: -10px
+			&:after
+				right: -10px
+
+	.hire-content
+		&__text
+			width: 100%
+		&__title
+			font-size: 1.5rem
+
+	.form-fields
+		&--half
+			&:first-child
+				width: 100%
+				padding: 0
+			&:last-child
+				width: 100%
+				padding: 0
+
+	.footer-socials
+		padding-top: 0
+		&__link
+			margin: 0
+			width: 50px
+			height: 50px
+
+/* Small Devices, Desktops 360*/
+@media screen and (max-width: 360px)
+	.experience
+		&__icon
+			top: 180px
+
+
+
+@media screen and (max-height: 530px)
+	.hero
+		&__content
+			bottom: 2rem
